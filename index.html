@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional & Santai</title>
+    <!-- Menggunakan font modern 'Plus Jakarta Sans' untuk kesan Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- STYLE CSS -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI KAPSUL -->
+    <nav>
+        <div class="logo">PortoKu.</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Kemampuan</a></li>
+            <li><a href="#portfolio">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home">
+        <div class="home-text fade-up">
+            <h3>👋 Halo, Selamat Datang!</h3>
+            <h1>Saya <span style="color: var(--primary);">Farah Aprilia</span></h1>
+            <p>Seorang Web Developer dan Desainer UI/UX. Saya suka menciptakan antarmuka digital yang bersih, estetik, dan nyaman digunakan (user-friendly).</p>
+            <a href="#portfolio" class="btn">Lihat Karya Saya</a>
+        </div>
+        <div class="home-img-wrapper fade-up" style="transition-delay: 0.2s;">
+            <!-- Bentuk organik/blob ada di class ini -->
+            <div class="home-img"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="section-header fade-up">
+            <h2>Tentang Saya</h2>
+            <p>Mengenal lebih dekat siapa saya di balik kode.</p>
+        </div>
+        <div class="about-content fade-up">
+            <p>Saya adalah mahasiswa jurusan Teknik Informatika yang sangat antusias dengan dunia pengembangan web (*Web Development*). Fokus utama saya adalah membangun tampilan depan (Front-end) web yang tidak hanya berfungsi dengan baik, tetapi juga memiliki desain yang interaktif, tidak kaku, dan memberikan pengalaman yang menyenangkan bagi penggunanya. Saat ini, saya sedang menyelesaikan proyek portofolio untuk mata kuliah Pemrograman Web 1.</p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <div class="section-header fade-up">
+            <h2>Kemampuan</h2>
+            <p>Teknologi dan alat yang saya kuasai.</p>
+        </div>
+        <!-- Desain Pil (Pill) untuk skills agar terlihat santai -->
+        <div class="skills-wrapper fade-up">
+            <div class="skill-pill">HTML5 & CSS3</div>
+            <div class="skill-pill">JavaScript (ES6+)</div>
+            <div class="skill-pill">Desain UI/UX</div>
+            <div class="skill-pill">Figma Prototyping</div>
+            <div class="skill-pill">Git & GitHub</div>
+            <div class="skill-pill">Responsive Web Design</div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+        <div class="section-header fade-up">
+            <h2>Daftar Proyek</h2>
+            <p>Beberapa karya yang telah saya selesaikan.</p>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Proyek 1 -->
+            <div class="portfolio-card fade-up">
+                <img src="assets/araweb.png" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3>Landing Page Agensi</h3>
+                    <p>Desain landing page modern untuk agensi digital dengan animasi *scroll-reveal* dan tata letak asimetris.</p>
+                </div>
+            </div>
+            <!-- Proyek 2 -->
+            <!-- <div class="portfolio-card fade-up" style="transition-delay: 0.1s;">
+                <div class="portfolio-img">[Gambar Mockup Proyek 2]</div>
+                <div class="portfolio-info">
+                    <h3>Aplikasi Cuaca Real-time</h3>
+                    <p>Membangun aplikasi cuaca menggunakan JavaScript murni dan mengambil data langsung dari API cuaca global.</p>
+                </div>
+            </div> -->
+            <!-- Proyek 3 -->
+            <div class="portfolio-card fade-up" style="transition-delay: 0.2s;">
+                <img src="assets/PW1.jpeg" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3>Kalkulator Finansial</h3>
+                    <p>Tugas logika pemrograman untuk menghitung simulasi cicilan dan investasi dengan UI bergaya *neumorphism*.</p>
+                </div>
+            </div>
+            <!-- Proyek 4 -->
+            <div class="portfolio-card fade-up" style="transition-delay: 0.3s;">
+                <img src="assets/ra.png" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3>Katalog Toko Kopi</h3>
+                    <p>Halaman e-commerce sederhana yang responsif, menampilkan daftar produk dengan fitur filter kategori.</p>
+                </div>
+            </div>
+            <!-- Proyek 5 -->
+            <div class="portfolio-card fade-up" style="transition-delay: 0.4s;">
+                S<img src="assets/Capture.PNG" class="portfolio-img">
+                <div class="portfolio-info">
+                    <h3>Website Portofolio Interaktif</h3>
+                    <p>Website portofolio pribadi (yang sedang Anda lihat) dengan tema terang/gelap dan elemen organik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="section-header fade-up">
+            <h2>Mari Bekerjasama</h2>
+            <p>Punya ide proyek? Jangan ragu untuk menghubungi saya.</p>
+        </div>
+        <div class="contact-container fade-up">
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Pesan berhasil terkirim!');">
+                <div class="input-group">
+                    <input type="text" placeholder="Nama Anda" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email Anda" required>
+                </div>
+                <div class="input-group">
+                    <textarea rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Pesan Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Farah Aprilia. Tugas Project Pemrograman Web 1.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
