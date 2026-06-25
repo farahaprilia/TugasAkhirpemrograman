@@ -1,10 +1,9 @@
-/* ================= VARIABEL TEMA (DARK/LIGHT) ================= */
         :root {
             --bg-color: #f8f9fa;
             --surface-color: #ffffff;
             --text-main: #2d3436;
             --text-muted: #636e72;
-            --primary: #6c5ce7; /* Warna aksen ungu modern */
+            --primary: #6c5ce7;
             --primary-hover: #5a4bcf;
             --border: rgba(0, 0, 0, 0.05);
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -23,22 +22,19 @@
             --pattern-color: rgba(255, 255, 255, 0.05);
         }
 
-        /* ================= RESET & BASE ================= */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        html { scroll-behavior: smooth; } /* Smooth scroll bawaan */
+        html { scroll-behavior: smooth; } 
         
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             transition: background-color 0.4s ease, color 0.4s ease;
-            /* TEKSTUR DOT GRID */
             background-image: radial-gradient(var(--pattern-color) 1.5px, transparent 1.5px);
             background-size: 25px 25px;
             overflow-x: hidden;
         }
 
-        /* ================= NAVIGASI (KAPSUL/MENGAMBANG) ================= */
         nav {
             position: fixed;
             top: 20px;
@@ -48,7 +44,7 @@
             width: 90%;
             max-width: 800px;
             padding: 12px 25px;
-            border-radius: 50px; /* Desain kapsul tidak kaku */
+            border-radius: 50px; 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,7 +59,6 @@
         .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         
-        /* Tombol Tema */
         .theme-toggle {
             background: var(--primary);
             color: white;
@@ -76,7 +71,6 @@
         }
         .theme-toggle:hover { background: var(--primary-hover); transform: translateY(-2px); }
 
-        /* ================= ANIMASI SCROLL REVEAL ================= */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -84,27 +78,23 @@
         }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-        /* ================= LAYOUT SECTION ================= */
         section { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 10px; }
         .section-header p { color: var(--text-muted); font-size: 1.1rem; }
 
-        /* ================= HERO / HOME ================= */
         #home { flex-direction: row; align-items: center; justify-content: space-between; gap: 50px; }
         .home-text { flex: 1; }
         .home-text h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 10px; font-weight: 600; }
         .home-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--text-main); }
         .home-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; max-width: 500px; line-height: 1.8; }
         
-        /* Gambar Organik (Blob) yang tidak kaku */
         .home-img-wrapper { flex: 1; display: flex; justify-content: center; }
         .home-img {
             width: 350px;
             height: 350px;
-            background: url(assets/ARA.jpeg) center/cover; /* Ganti dengan fotomu */
+            background: url(assets/ARA.jpeg) center/cover; 
             box-shadow: var(--shadow);
-            /* Membuat bentuk organik yang bergerak santai */
             animation: morph 8s ease-in-out infinite;
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             border: 5px solid var(--surface-color);
@@ -115,17 +105,13 @@
             100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
 
-        /* Tombol Utama */
         .btn {
             display: inline-block; padding: 15px 30px; background: var(--primary); color: white;
             text-decoration: none; border-radius: 30px; font-weight: 600;
             box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3); transition: 0.3s;
         }
         .btn:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 25px rgba(108, 92, 231, 0.4); }
-
-        /* ================= ABOUT & SKILLS (Bentuk Pil & Kartu Melengkung) ================= */
         .about-content { background: var(--surface-color); padding: 40px; border-radius: 30px; box-shadow: var(--shadow); text-align: center; line-height: 1.8; color: var(--text-muted); }
-        
         .skills-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
         .skill-pill {
             background: var(--surface-color); padding: 12px 25px; border-radius: 50px;
@@ -133,8 +119,6 @@
             border: 1px solid var(--border); transition: 0.3s; cursor: default;
         }
         .skill-pill:hover { background: var(--primary); color: white; transform: translateY(-5px); }
-
-        /* ================= PORTFOLIO (Grid Modern) ================= */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .portfolio-card {
             background: var(--surface-color); border-radius: 24px; overflow: hidden;
@@ -147,7 +131,6 @@
         .portfolio-info h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main); }
         .portfolio-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
-        /* ================= CONTACT ================= */
         .contact-container { max-width: 600px; margin: 0 auto; background: var(--surface-color); padding: 40px; border-radius: 30px; box-shadow: var(--shadow); border: 1px solid var(--border); }
         .contact-form { display: flex; flex-direction: column; gap: 20px; }
         .input-group input, .input-group textarea {
@@ -159,10 +142,8 @@
         .btn-submit { background: var(--primary); color: white; border: none; padding: 18px; border-radius: 15px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.3s; }
         .btn-submit:hover { background: var(--primary-hover); transform: translateY(-2px); }
 
-        /* ================= FOOTER ================= */
         footer { text-align: center; padding: 30px; color: var(--text-muted); font-size: 0.9rem; margin-top: 50px; }
 
-        /* ================= RESPONSIVE ================= */
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; }
         
         @media (max-width: 768px) {
