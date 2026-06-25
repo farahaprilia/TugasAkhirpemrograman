@@ -1,4 +1,3 @@
-// 1. FITUR DARK MODE (Santai & Halus)
         function toggleTheme() {
             const body = document.body;
             const btn = document.getElementById('themeBtn');
@@ -12,13 +11,11 @@
             }
         }
 
-        // 2. FITUR MOBILE MENU
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
 
-        // Menutup menu saat link diklik (di versi HP)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.getElementById('navLinks');
@@ -28,23 +25,21 @@
             });
         });
 
-        // 3. FITUR INTERSECTION OBSERVER (Animasi Scroll Super Smooth)
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.15 // Elemen akan muncul saat 15% bagiannya terlihat di layar
+            threshold: 0.15 
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Hanya animasi sekali saat discroll ke bawah
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Pasang observer ke semua elemen dengan class 'fade-up'
         document.querySelectorAll('.fade-up').forEach((el) => {
             observer.observe(el);
         });
